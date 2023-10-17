@@ -1,0 +1,27 @@
+/* Styles pour le composant d'en-tête */
+.header {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  /* Styles pour l'image */
+  .header-image {
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de l'en-tête */
+    height: auto; /* Conservez le ratio hauteur/largeur de l'image */
+    border-radius: 50%; /* Si vous voulez arrondir l'image */
+    animation: bounce 2s infinite; /* Ajoutez une animation (dans cet exemple, un rebond) */
+  }
+  
+  /* Animation de rebond (exemple) */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  

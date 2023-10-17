@@ -1,0 +1,360 @@
+/* Styles globaux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles du conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Styles de l'en-tête */
+.header {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+/* Styles des caractéristiques */
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.feature {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+/* Autres styles pour les sections restantes */
+
+/* Styles pour les médias mobiles */
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styles pour les boutons 3D */
+.button-3d {
+  background-color: #ff5733; /* Couleur orange */
+  font-size: 14px !important; /* Modifiez la taille de la police en fonction de vos besoins */
+  color: #fff;
+  padding: 10px 20px; /* Réduisez la taille des boutons */
+  border: 1px solid #000000; /* Couleur de la bordure orange */
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 14px; /* Réduisez la taille de la police */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  margin-top: -100px;
+  
+}
+
+
+.button-3d:hover {
+  transform: translateY(-5px) rotate(2deg); /* Basculement (tilt) */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f24a26; /* Couleur orange légèrement différente au survol */
+}
+
+/* Centrez les boutons horizontalement */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px; /* Ajustez la hauteur en fonction de votre mise en page */
+}
+
+/* Ajoutez un espacement entre les boutons */
+.button-3d + .button-3d {
+  margin-left: 50px;
+}
+
+/* Styles pour la nouvelle section */
+.new-section {
+  background-color: #ffffff; /* Fond gris clair */
+  padding: 50px 0;
+}
+
+/* Styles pour le contenu de la nouvelle section */
+.new-section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.animated-text {
+  text-align: justify;
+}
+
+
+/* Styles pour le conteneur des colonnes */
+.three-columns {
+  background-color: #ffffff; /* Fond gris clair */
+  padding: 50px 0;
+  display: grid; /* Utilisez CSS Grid pour disposer les colonnes */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Créez des colonnes automatiquement avec une largeur minimale de 300px */
+  gap: 20px; /* Espace entre les colonnes */
+  margin-left: 10%; /* Ajoute un padding de 10% à gauche */
+  margin-right: 10%; /* Ajoute un padding de 10% à droite */
+}
+
+/* Styles pour chaque colonne */
+.column {
+  background-color: none !important; /* Fond blanc */
+  border: 1px solid #000; /* Bordure noire de 1px */
+  padding: 20px;
+}
+
+/* Styles pour les titres des colonnes */
+.column h2 {
+  font-size: 24px;
+}
+
+/* Styles pour l'élément racine (body) */
+body {
+  background-color: #fff; /* Fond blanc */
+  margin: 0; /* Supprimez la marge par défaut du body */
+  font-family: Arial, sans-serif; /* Choisissez une police de caractères */
+}
+
+/* Styles pour le bouton de téléphone */
+.phone-button {
+  position: absolute;
+  top: 20px; /* Ajustez la distance par rapport au haut de la page */
+  left: 20px; /* Ajustez la distance par rapport à gauche de la page */
+  background-color: #00bae5; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  animation: intermittent-shine 4s infinite; /* Applique l'animation intermittente */
+}
+
+
+/* Animation de brillance intermittente pour phone button */
+@keyframes intermittent-shine {
+  0%, 100% {
+    background-color: #00bae5; /* Couleur de fond au début et à la fin de l'animation */
+    box-shadow: none; /* Pas d'ombre */
+  }
+  50% {
+    background-color: #fb5977; /* Nouvelle couleur de fond à mi-chemin */
+    box-shadow: 0 0 5px #6e6e6e, 0 0 10px #6e6e6e, 0 0 15px #6e6e6e; /* Ombre */
+  }
+}
+
+/* Styles pour l'icône de téléphone */
+.phone-button i {
+  margin-right: 10px;
+}
+
+  /* Animation de clignotement pour l'icône slash dans la banniere "/" */
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Style de l'icône "/" */
+  .blinking-icon {
+    animation: blink 1s infinite;
+    color: #ffffff; /* Applique l'animation de clignotement */
+    font-size: 30px;
+  }
+
+  /* Couleurs qu'on peut utiliser dans le fichier .js */
+.texte-bleu {
+  color: #00bae5;
+}
+
+.texte-rouge {
+  color: #fb5977;
+}
+
+.texte-jaune {
+  color: #ffd04d;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.move-left-to-right {
+  width: 10%; /* Set the width to 10% */
+  height: 10%; /* Maintain aspect ratio */
+  position: relative;
+  animation: moveLeftToRight 10s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 10%); /* Set the width to 10% */
+  }
+}
+/* Dans votre fichier CSS global ou un fichier séparé */
+.site-container {
+  max-width: 1200px; /* Définissez la largeur maximale souhaitée */
+  margin: 0 auto; /* Pour centrer le contenu horizontalement */
+}
+
+/* Style de base pour le bouton */
+.wave-button {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Ajoutez une transition pour changer la couleur de fond */
+}
+
+/* Style de l'effet d'onde */
+.wave-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style lorsque le bouton est activé avec l'effet d'onde */
+.wave-button.wave-active:after {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+/* Style du bouton lorsqu'il est survolé */
+.wave-button:hover {
+  background-color: #fb5977; /* Changez la couleur de fond au survol */
+  border-color: #000000; /* Changez la couleur de la bordure au survol */
+  color: white; /* Changez la couleur du texte au survol */
+}
+
+/* Styles pour le calculateur DIY */
+#diy-calculator {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#diy-calculator h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#diy-calculator h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styles pour les zones horizontales */
+.diy-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.diy-row label {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+}
+
+.diy-row input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+
+/* Styles pour les champs résultants */
+.result-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.result-field label {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+  margin: 10px;
+}
+
+.result-field input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+  .result-field span {
+    font-size: 16px;
+    color: #333;
+  }

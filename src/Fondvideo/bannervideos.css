@@ -1,0 +1,20 @@
+.banner-video-container {
+  position: relative;
+  height: 500px; /* Hauteur souhaitée de la bannière */
+  overflow: hidden;
+}
+
+.banner-video {
+  width: 100%; /* Largeur totale de la bannière */
+  height: auto; /* Hauteur automatique pour conserver le rapport hauteur/largeur de la vidéo */
+}
+
+.banner-text {
+  text-align: center; /* Centrer le texte horizontalement */
+  color: #fff; /* Couleur du texte */
+  font-size: 24px; /* Taille de police du texte */
+  position: absolute;
+  top: 50%; /* Position verticale au milieu de la bannière */
+  left: 50%; /* Position horizontale au milieu de la bannière */
+  transform: translate(-50%, -50%); /* Centre le texte en ajustant sa position par rapport à son propre taille */
+}
